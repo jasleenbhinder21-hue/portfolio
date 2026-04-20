@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>My Education | Jasleen</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f2f4f7",
+                        "on-error": "#fff7f7",
+                        "background": "#f8f9fc",
+                        "surface-bright": "#f8f9fc",
+                        "primary-fixed-dim": "#b6a8ff",
+                        "on-secondary-container": "#991e56",
+                        "on-tertiary": "#f1faff",
+                        "secondary": "#ab2d63",
+                        "primary-dim": "#5434ca",
+                        "secondary-container": "#ffd9e2",
+                        "secondary-fixed-dim": "#ffc5d5",
+                        "inverse-on-surface": "#9b9da0",
+                        "surface-tint": "#6043d7",
+                        "on-primary-fixed-variant": "#4620bc",
+                        "surface-container-high": "#e5e8ed",
+                        "on-secondary": "#fff7f7",
+                        "surface-container-highest": "#dee3e8",
+                        "inverse-surface": "#0c0f11",
+                        "on-primary": "#fcf7ff",
+                        "on-primary-fixed": "#280083",
+                        "secondary-fixed": "#ffd9e2",
+                        "on-surface": "#2e3337",
+                        "surface-container": "#ebeef2",
+                        "inverse-primary": "#937dff",
+                        "surface": "#f8f9fc",
+                        "tertiary-fixed": "#00d2ff",
+                        "primary-container": "#c4b8ff",
+                        "on-surface-variant": "#5a6064",
+                        "surface-variant": "#dee3e8",
+                        "on-background": "#2e3337",
+                        "primary-fixed": "#c4b8ff",
+                        "error-dim": "#770326",
+                        "outline": "#767b80",
+                        "error-container": "#f76a80",
+                        "on-primary-container": "#3d0eb4",
+                        "surface-dim": "#d5dbe1",
+                        "tertiary-container": "#00d2ff",
+                        "on-tertiary-fixed": "#002c38",
+                        "on-tertiary-container": "#004253",
+                        "secondary-dim": "#9b2057",
+                        "tertiary-dim": "#005b70",
+                        "on-secondary-fixed-variant": "#a62960",
+                        "tertiary": "#00687f",
+                        "outline-variant": "#adb2b8",
+                        "on-tertiary-fixed-variant": "#004c5e",
+                        "on-secondary-fixed": "#800243",
+                        "tertiary-fixed-dim": "#00c3ed",
+                        "on-error-container": "#68001f",
+                        "error": "#ac3149",
+                        "primary": "#6043d7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-[0_20px_40px_rgba(46,51,55,0.06)] transition-all duration-300">
+        <nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[#b6a8ff]" data-icon="bubble_chart">bubble_chart</span>
+                <span
+                    class="font-manrope font-black text-2xl bg-clip-text text-transparent bg-gradient-to-r from-[#937dff] to-[#ffc5d5]">Jasleen</span>
+            </div>
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center gap-8">
+                <a class="relative text-slate-500 font-semibold transition-colors duration-300 hover:text-[#937dff] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#937dff] after:transition-all hover:after:w-full"
+                    href="index.html">Home</a>
+                <a class="relative text-[#937dff] font-bold transition-colors duration-300 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#937dff]"
+                    href="index1.html">Education</a>
+                <a class="relative text-slate-500 font-semibold transition-colors duration-300 hover:text-[#937dff] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#937dff] after:transition-all hover:after:w-full"
+                    href="index3.html">Achievements</a>
+                <a class="relative text-slate-500 font-semibold transition-colors duration-300 hover:text-[#937dff] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#937dff] after:transition-all hover:after:w-full"
+                    href="index2.html">Contact</a>
+            </div>
+            <button class="md:hidden text-slate-500 hover:text-[#937dff]">
+                <span class="material-symbols-outlined" data-icon="menu">menu</span>
+            </button>
+        </nav>
+    </header>
+    <main class="pt-32 pb-32 px-6 max-w-7xl mx-auto">
+        <!-- Hero Section -->
+        <section class="mb-20">
+            <div class="flex flex-col gap-4">
+                <span
+                    class="text-secondary font-label font-bold tracking-widest text-xs uppercase bg-secondary-container/30 w-fit px-4 py-1 rounded-full">Academic
+                    Journey</span>
+                <h1
+                    class="font-headline font-extrabold text-5xl md:text-7xl text-on-surface tracking-tight leading-[1.1]">
+                    My Education
+                </h1>
+                <p class="text-on-surface-variant max-w-2xl text-lg md:text-xl leading-relaxed">
+                    Bridging the gap between classical learning and the future of artificial intelligence.
+                </p>
+            </div>
+        </section>
+        <!-- Bento Grid Layout for Education -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <!-- Primary Education Card - DAV Public School -->
+            <div
+                class="md:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-[2rem] shadow-[0_20px_40px_rgba(46,51,55,0.06)] relative overflow-hidden group">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl -mr-20 -mt-20 group-hover:bg-primary-container/30 transition-colors duration-500">
+                </div>
+                <div class="relative z-10 flex flex-col h-full justify-between gap-12">
+                    <div class="flex justify-between items-start">
+                        <div class="p-4 bg-surface-container-low rounded-2xl">
+                            <span class="material-symbols-outlined text-primary text-3xl"
+                                data-icon="school">school</span>
+                        </div>
+                        <span
+                            class="text-on-surface-variant font-label text-sm font-semibold tracking-tighter">Completed</span>
+                    </div>
+                    <div>
+                        <h2 class="font-headline font-bold text-3xl text-on-surface mb-2">DAV Public School</h2>
+                        <p class="text-primary font-medium mb-4">Sector 14, Faridabad</p>
+                        <div class="h-px w-12 bg-outline-variant/30 mb-6"></div>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            Foundational academic years focused on excellence in sciences and mathematics. Graduated
+                            with honors, participating in various inter-school coding and technology symposia.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="bg-surface-container-low px-4 py-2 rounded-xl text-xs font-bold text-on-surface-variant">Class
+                            of 2022</span>
+                        <span
+                            class="bg-surface-container-low px-4 py-2 rounded-xl text-xs font-bold text-on-surface-variant">STEM
+                            Excellence</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Accent Card - Image/Visual -->
+            <div class="md:col-span-5 bg-primary rounded-[2rem] overflow-hidden relative min-h-[300px]">
+                <img class="w-full h-full object-cover opacity-60 mix-blend-overlay"
+                    data-alt="close-up of a modern neural network visualization on a laptop screen with violet and blue neon lights reflecting in a dark studio"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs_tXVW7ubjHY0-PGhBT9SJ6R3FjX8ENnaYPaz_ghvO5WNIabMjJkbZBf8q38X--fc52O5ZXY3-ZlrJPhFFiFnDl_GEHHOpwP806GPNigWrpfR6SIj58dR5gLI3Z65XPnWnCrmQVQvlnUCIItclHvtJrgosFCfrNxcTtrFk-uC-CHr4odA1KAaFVvI6nPfz59oK7P910h0MYmp_jGyNLTxlrp93kHGDb9ETE10TsES02q5qFlKlIfYh5unz5wq6ckoGaaMc5SKICo" />
+                <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+                <div class="absolute bottom-8 left-8 right-8 text-white">
+                    <span class="material-symbols-outlined mb-2 block" data-icon="terminal">terminal</span>
+                    <h3 class="font-headline font-bold text-2xl">Code as a Second Language</h3>
+                </div>
+            </div>
+            <!-- Higher Education Card - Manav Rachna -->
+            <div
+                class="md:col-span-12 bg-surface-container-low p-8 md:p-12 rounded-[2rem] flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2">
+                    <div class="inline-flex items-center gap-2 mb-6 text-tertiary">
+                        <span class="material-symbols-outlined" data-icon="hub">hub</span>
+                        <span class="font-label font-bold uppercase tracking-widest text-xs">Current Focus</span>
+                    </div>
+                    <h2 class="font-headline font-extrabold text-4xl text-on-surface mb-4">B.Tech in AI &amp; ML</h2>
+                    <h3 class="text-2xl text-on-surface-variant mb-6">Manav Rachna University, Faridabad</h3>
+                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                        Deep-diving into neural networks, algorithmic complexity, and predictive modeling. Designing
+                        systems that learn and adapt to human needs.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="bg-surface-container-lowest p-4 rounded-2xl flex items-center gap-3 border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-secondary"
+                                data-icon="psychology">psychology</span>
+                            <span class="font-label font-semibold text-sm">Deep Learning</span>
+                        </div>
+                        <div
+                            class="bg-surface-container-lowest p-4 rounded-2xl flex items-center gap-3 border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-tertiary"
+                                data-icon="data_object">data_object</span>
+                            <span class="font-label font-semibold text-sm">Python Mastery</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full md:w-1/2 h-full min-h-[400px] bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm relative group">
+                    <img class="w-full h-full object-cover"
+                        data-alt="wide shot of a contemporary university architecture with glass walls and students walking in a bright sunlit campus plaza"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR0F3pr4w92ywQIjZd-F-gQU6GOn444TXLdAPIjVe5mHtCfFDyrBW48Wc1yW7mWkeWrrYshIkXtN1hywzuKbY04-zk57eb__z_gj2-XXIU-JWj_QYcb_v6H1vCXxzJE_HmoJbU6no4fdPg7g5fGfQhvQoneW8WGHUHbv9-90lmnmqKZF0qwl-ziEixXaBRe0vJS2PzTVDW3G8js9Pah02aATtz_rXkGQDxTowEWQ7eQOe3fo4M8bwk2UVJs3yH-Nkh5YZqswP5QDw" />
+                    <div
+                        class="absolute inset-0 bg-on-surface/5 group-hover:bg-transparent transition-colors duration-500">
+                    </div>
+                </div>
+            </div>
+            <!-- Skill Tags Section (Asymmetric) -->
+            <div class="md:col-span-4 bg-secondary-container/30 p-8 rounded-[2rem] flex flex-col justify-between">
+                <h4 class="font-headline font-bold text-xl text-on-secondary-container mb-4">Current Curriculum</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3 text-on-secondary-container/80 text-sm font-semibold">
+                        <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Discrete Mathematics
+                    </li>
+                    <li class="flex items-center gap-3 text-on-secondary-container/80 text-sm font-semibold">
+                        <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Operating Systems
+                    </li>
+                    <li class="flex items-center gap-3 text-on-secondary-container/80 text-sm font-semibold">
+                        <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Neural Networks
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="md:col-span-8 bg-surface-container-lowest p-8 rounded-[2rem] border border-outline-variant/10 flex items-center justify-between">
+                <div>
+                    <h4 class="font-headline font-bold text-xl text-on-surface mb-2">Technical Prowess</h4>
+                    <p class="text-on-surface-variant text-sm">Actively mastering the modern stack of intelligence.</p>
+                </div>
+                <div class="flex -space-x-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center border-2 border-surface-container-lowest">
+                        <span class="material-symbols-outlined text-primary text-sm" data-icon="memory">memory</span>
+                    </div>
+                    <div
+                        class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center border-2 border-surface-container-lowest">
+                        <span class="material-symbols-outlined text-secondary text-sm"
+                            data-icon="analytics">analytics</span>
+                    </div>
+                    <div
+                        class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center border-2 border-surface-container-lowest">
+                        <span class="material-symbols-outlined text-tertiary text-sm" data-icon="cloud">cloud</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-12 border-t border-slate-200/10 bg-[#f8f9fc] flex flex-col items-center gap-6 text-center">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[#b6a8ff]" data-icon="bubble_chart">bubble_chart</span>
+            <span class="font-manrope font-extrabold text-[#937dff] text-xl tracking-tight">Jasleen</span>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 md:gap-8 font-label font-semibold text-sm">
+            <a class="text-slate-500 hover:text-[#937dff] transition-colors" href="index.html">Home</a>
+            <a class="text-slate-500 hover:text-[#937dff] transition-colors" href="index1.html">Education</a>
+            <a class="text-slate-500 hover:text-[#937dff] transition-colors" href="index3.html">Achievements</a>
+            <a class="text-slate-500 hover:text-[#937dff] transition-colors" href="index2.html">Contact</a>
+        </div>
+        <div class="flex gap-8 mt-2 text-slate-500 font-plus-jakarta text-sm">
+            <a class="text-slate-400 hover:text-[#937dff] transition-colors font-label font-semibold"
+                href="http://www.linkedin.com/in/jasleen-bhinder-59a809375?utm_source=share_via&utm_content=profile&utm_medium=member_ios">LinkedIn</a>
+            <a class="text-slate-400 hover:text-[#937dff] transition-colors font-label font-semibold"
+                href="https://github.com/jasleenbhinder21-hue">GitHub</a>
+        </div>
+        <p class="font-plus-jakarta text-sm text-slate-500 opacity-80">© 2024 Jasleen. Curated with AI &amp; Art.</p>
+    </footer>
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav
+        class="md:hidden fixed bottom-0 left-0 w-full h-20 bg-white/80 backdrop-blur-xl flex justify-around items-center px-4 pb-safe z-50 rounded-t-[2rem] shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+        <a class="flex flex-col items-center justify-center text-slate-400 hover:text-[#937dff] transition-colors"
+            href="index.html">
+            <span class="material-symbols-outlined" data-icon="home">home</span>
+            <span class="font-plus-jakarta text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+        </a>
+        <a class="flex flex-col items-center justify-center bg-[#f3e8ff] text-[#937dff] rounded-full px-5 py-2 transition-colors"
+            href="index1.html">
+            <span class="material-symbols-outlined" data-icon="school"
+                style="font-variation-settings: 'FILL' 1;">school</span>
+            <span class="font-plus-jakarta text-[10px] font-semibold uppercase tracking-widest mt-1">Education</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-400 hover:text-[#937dff] transition-colors"
+            href="index3.html">
+            <span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+            <span class="font-plus-jakarta text-[10px] font-semibold uppercase tracking-widest mt-1">Achievements</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-400 hover:text-[#937dff] transition-colors"
+            href="index2.html">
+            <span class="material-symbols-outlined" data-icon="mail">mail</span>
+            <span class="font-plus-jakarta text-[10px] font-semibold uppercase tracking-widest mt-1">Contact</span>
+        </a>
+    </nav>
+</body>
+
+</html>

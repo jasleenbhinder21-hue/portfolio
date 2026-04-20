@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Jasleen | The Algorithmic Atelier</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f2f4f7",
+                        "on-error": "#fff7f7",
+                        "background": "#f8f9fc",
+                        "surface-bright": "#f8f9fc",
+                        "primary-fixed-dim": "#b6a8ff",
+                        "on-secondary-container": "#991e56",
+                        "on-tertiary": "#f1faff",
+                        "secondary": "#ab2d63",
+                        "primary-dim": "#5434ca",
+                        "secondary-container": "#ffd9e2",
+                        "secondary-fixed-dim": "#ffc5d5",
+                        "inverse-on-surface": "#9b9da0",
+                        "surface-tint": "#6043d7",
+                        "on-primary-fixed-variant": "#4620bc",
+                        "surface-container-high": "#e5e8ed",
+                        "on-secondary": "#fff7f7",
+                        "surface-container-highest": "#dee3e8",
+                        "inverse-surface": "#0c0f11",
+                        "on-primary": "#fcf7ff",
+                        "on-primary-fixed": "#280083",
+                        "secondary-fixed": "#ffd9e2",
+                        "on-surface": "#2e3337",
+                        "surface-container": "#ebeef2",
+                        "inverse-primary": "#937dff",
+                        "surface": "#f8f9fc",
+                        "tertiary-fixed": "#00d2ff",
+                        "primary-container": "#c4b8ff",
+                        "on-surface-variant": "#5a6064",
+                        "surface-variant": "#dee3e8",
+                        "on-background": "#2e3337",
+                        "primary-fixed": "#c4b8ff",
+                        "error-dim": "#770326",
+                        "outline": "#767b80",
+                        "error-container": "#f76a80",
+                        "on-primary-container": "#3d0eb4",
+                        "surface-dim": "#d5dbe1",
+                        "tertiary-container": "#00d2ff",
+                        "on-tertiary-fixed": "#002c38",
+                        "on-tertiary-container": "#004253",
+                        "secondary-dim": "#9b2057",
+                        "tertiary-dim": "#005b70",
+                        "on-secondary-fixed-variant": "#a62960",
+                        "tertiary": "#00687f",
+                        "outline-variant": "#adb2b8",
+                        "on-tertiary-fixed-variant": "#004c5e",
+                        "on-secondary-fixed": "#800243",
+                        "tertiary-fixed-dim": "#00c3ed",
+                        "on-error-container": "#68001f",
+                        "error": "#ac3149",
+                        "primary": "#6043d7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+
+        .asymmetric-canvas {
+            background: radial-gradient(circle at 10% 20%, rgba(196, 184, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 217, 226, 0.2) 0%, transparent 40%);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-[0_20px_40px_rgba(46,51,55,0.06)]">
+        <nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-violet-600" data-icon="bubble_chart">bubble_chart</span>
+                <span
+                    class="font-manrope font-black text-2xl bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-500">Jasleen</span>
+            </div>
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center gap-8">
+                <a class="relative text-[#937dff] font-bold transition-colors duration-300 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#937dff]"
+                    href="index.html">Home</a>
+                <a class="relative text-slate-500 font-semibold transition-colors duration-300 hover:text-[#937dff] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#937dff] after:transition-all hover:after:w-full"
+                    href="index1.html">Education</a>
+                <a class="relative text-slate-500 font-semibold transition-colors duration-300 hover:text-[#937dff] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#937dff] after:transition-all hover:after:w-full"
+                    href="index3.html">Achievements</a>
+                <a class="relative text-slate-500 font-semibold transition-colors duration-300 hover:text-[#937dff] after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#937dff] after:transition-all hover:after:w-full"
+                    href="index2.html">Contact</a>
+            </div>
+            <button class="md:hidden text-slate-500 hover:text-[#937dff]">
+                <span class="material-symbols-outlined" data-icon="menu">menu</span>
+            </button>
+        </nav>
+    </header>
+    <main class="min-h-screen pt-20 asymmetric-canvas">
+        <!-- Hero Section -->
+        <section class="relative h-[751px] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+            <!-- Decorative Elements -->
+            <div class="absolute -z-10 top-1/4 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+            <div class="absolute -z-10 bottom-1/4 right-10 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+            <div class="max-w-4xl space-y-8">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-secondary-container/30 text-on-secondary-container rounded-full font-label text-sm font-bold uppercase tracking-widest">
+                    <span class="material-symbols-outlined text-sm" data-icon="palette"
+                        style="font-variation-settings: 'FILL' 1;">palette</span>
+                    The Digital Curator
+                </div>
+                <h1
+                    class="font-headline font-extrabold text-5xl md:text-8xl tracking-tight text-on-surface leading-tight">
+                    Hello, I’m <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Jasleen</span>
+                </h1>
+                <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                    A creative and passionate student with a strong interest in art and technology. Based in Faridabad,
+                    India.
+                </p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
+                    <div
+                        class="flex items-center gap-3 px-6 py-3 bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(46,51,55,0.06)] border border-outline-variant/15">
+                        <span class="material-symbols-outlined text-primary"
+                            data-icon="calendar_today">calendar_today</span>
+                        <span class="font-label font-semibold">19 Years Old</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-3 px-6 py-3 bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(46,51,55,0.06)] border border-outline-variant/15">
+                        <span class="material-symbols-outlined text-tertiary" data-icon="location_on">location_on</span>
+                        <span class="font-label font-semibold">Faridabad, India</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-400">
+                <span class="text-[10px] font-bold uppercase tracking-[0.3em]">Explore</span>
+                <span class="material-symbols-outlined animate-bounce"
+                    data-icon="keyboard_double_arrow_down">keyboard_double_arrow_down</span>
+            </div>
+        </section>
+        <!-- Featured Content (Bento Grid) -->
+        <section class="max-w-7xl mx-auto px-6 py-24 bg-surface-container-low rounded-[3rem]">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- Large Card: Art -->
+                <div
+                    class="md:col-span-8 group relative overflow-hidden bg-surface-container-lowest rounded-3xl aspect-[16/9] flex flex-col justify-end p-8">
+                    <img alt="Abstract Art"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Dreamy abstract watercolor painting with flowing violet and soft pink textures, ethereal atmosphere, digital art style"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxWtpyGDsWi3zdcgIgG8_ZKT9MI7Hk91pKgp94I8CMaNkEfSXImxp7VOE9AZmUDJyKtNXkUqc991K6dykErJnae1PqJzoXEOv1AnSjSXyPqhUUmI5zQgo-OgfGxh84F6Jx5_8T21Qq3Qs6lKt4jMCWeOSfkk7-rI5qJav6nU8K4Bm5pqu046X9VNTb01JER1Qvg1Y2uBc9LK-P8t2cbrVuoPMLfn2fuGtk86YElgg3UM2TIRFM_WT7SoLJFyKRqD1eyvrkdZ1tzg0" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent">
+                    </div>
+                    <div class="relative z-10 space-y-2">
+                        <div
+                            class="inline-block px-3 py-1 bg-violet-600 text-white text-[10px] font-bold uppercase tracking-widest rounded-full">
+                            Creative</div>
+                        <h3 class="text-white text-3xl font-headline font-bold">Fluid Expressions</h3>
+                        <p class="text-slate-200 font-body">Exploring the intersection of traditional mediums and
+                            digital canvases.</p>
+                    </div>
+                </div>
+                <!-- Small Card: Age/Identity -->
+                <div class="md:col-span-4 bg-primary text-on-primary rounded-3xl p-8 flex flex-col justify-between">
+                    <span class="material-symbols-outlined text-4xl" data-icon="auto_awesome"
+                        style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                    <div>
+                        <h4 class="font-headline text-4xl font-black mb-2">19</h4>
+                        <p class="font-body text-primary-container text-lg">Years of curiosity, learning, and creating.
+                        </p>
+                    </div>
+                </div>
+                <!-- Small Card: Tech -->
+                <div
+                    class="md:col-span-4 bg-surface-container-lowest rounded-3xl p-8 border border-outline-variant/15 flex flex-col gap-6">
+                    <div class="w-12 h-12 rounded-2xl bg-tertiary-container/30 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-tertiary" data-icon="terminal">terminal</span>
+                    </div>
+                    <h4 class="font-headline text-2xl font-bold">Tech Interest</h4>
+                    <p class="text-on-surface-variant leading-relaxed">Developing digital solutions that prioritize
+                        human-centric design and aesthetic precision.</p>
+                </div>
+                <!-- Medium Card: Location Map Visual -->
+                <div
+                    class="md:col-span-8 bg-surface-container-lowest rounded-3xl overflow-hidden relative min-h-[300px]">
+                    <img alt="Faridabad Cityscape"
+                        class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-500"
+                        data-alt="Modern urban cityscape of Faridabad India during twilight with glowing street lights and architectural silhouettes"
+                        data-location="Faridabad"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqsiLdZ1A_8odhcagn5zTsAwKLZ_ioWO3IjVjEIFyUpB4POvnyMZXugmLAdhG5vtz243sXQ_3JQ62QrmUlGfkpy2XRqhOmvCidc1mz3bnZFG9bLQ6xCIchXSlH55im25DnSQ2GCvNbV2KyD3HZ3gO9YuPep9urvhXw1RLwxef_iX00uLpxAcybIumeZx-zbfA5IdJS1p9-iZyUxvGWCW40jcxKsrRWmsFT_iTASiqoptSUv4Ntou8s5zLnbcJAyULB9kvY5yLUzOc" />
+                    <div class="absolute inset-0 p-8 flex flex-col justify-between pointer-events-none">
+                        <div class="flex justify-between items-start">
+                            <span
+                                class="px-4 py-2 bg-white/80 backdrop-blur-md rounded-full font-label font-bold text-xs uppercase tracking-widest text-on-surface">Base
+                                Location</span>
+                            <span class="material-symbols-outlined text-secondary" data-icon="explore"
+                                style="font-variation-settings: 'FILL' 1;">explore</span>
+                        </div>
+                        <h3 class="text-4xl font-headline font-extrabold text-on-surface">Faridabad, India</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-12 border-t border-slate-200/10 bg-[#f8f9fc] flex flex-col items-center gap-6 text-center">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[#b6a8ff]" data-icon="bubble_chart">bubble_chart</span>
+            <span class="font-manrope font-extrabold text-[#937dff] text-xl tracking-tight">Jasleen</span>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 md:gap-8 font-label font-semibold text-sm">
+            <a class="text-slate-500 hover:text-[#937dff] transition-colors" href="index.html">Home</a>
+            <a class="text-slate-500 hover:text-[#937dff] transition-colors" href="index1.html">Education</a>
+            <a class="text-slate-500 hover:text-[#937dff] transition-colors" href="index3.html">Achievements</a>
+            <a class="text-slate-500 hover:text-[#937dff] transition-colors" href="index2.html">Contact</a>
+        </div>
+        <div class="flex gap-8 mt-2 text-slate-500 font-plus-jakarta text-sm">
+            <a class="text-slate-400 hover:text-[#937dff] transition-colors font-label font-semibold"
+                href="http://www.linkedin.com/in/jasleen-bhinder-59a809375?utm_source=share_via&utm_content=profile&utm_medium=member_ios">LinkedIn</a>
+            <a class="text-slate-400 hover:text-[#937dff] transition-colors font-label font-semibold"
+                href="https://github.com/jasleenbhinder21-hue">GitHub</a>
+        </div>
+        <p class="font-plus-jakarta text-sm text-slate-500 opacity-80">© 2024 Jasleen. Curated with AI &amp; Art.</p>
+    </footer>
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav
+        class="md:hidden fixed bottom-0 left-0 w-full h-20 bg-white/80 backdrop-blur-xl flex justify-around items-center px-4 pb-safe z-50 rounded-t-[2rem] shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+        <a class="flex flex-col items-center justify-center bg-[#f3e8ff] text-[#937dff] rounded-full px-5 py-2 transition-colors"
+            href="index.html">
+            <span class="material-symbols-outlined" data-icon="home"
+                style="font-variation-settings: 'FILL' 1;">home</span>
+            <span class="font-plus-jakarta text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-400 hover:text-[#937dff] transition-colors"
+            href="index1.html">
+            <span class="material-symbols-outlined" data-icon="school">school</span>
+            <span class="font-plus-jakarta text-[10px] font-semibold uppercase tracking-widest mt-1">Education</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-400 hover:text-[#937dff] transition-colors"
+            href="index3.html">
+            <span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+            <span class="font-plus-jakarta text-[10px] font-semibold uppercase tracking-widest mt-1">Achievements</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-400 hover:text-[#937dff] transition-colors"
+            href="index2.html">
+            <span class="material-symbols-outlined" data-icon="mail">mail</span>
+            <span class="font-plus-jakarta text-[10px] font-semibold uppercase tracking-widest mt-1">Contact</span>
+        </a>
+    </nav>
+</body>
+
+</html>
